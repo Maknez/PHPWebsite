@@ -1,0 +1,54 @@
+1. Produkt 
+http://www.thewineshops.com/tws/signature-series-ice-cuvee-vqa.html
+
+2. Produkt
+http://www.thewineshops.com/trius-cabernet-franc.html
+
+3. Produkt 
+http://www.thewineshops.com/tws/estate-series-shiraz-cabernet-2008.html
+
+4. Produkt
+http://www.thewineshops.com/tws/trius-sauvignon-blanc.html
+
+5. Produkt
+http://www.thewineshops.com/tws/thirty-bench-winemaker-s-red-2011-vqa.html
+
+6. Produkt
+http://www.thewineshops.com/tws/skinnygrape-pinot-grigio.html
+
+7. Produkt
+http://www.thewineshops.com/tws/rebellion-shiraz.html
+
+8. Produkt
+http://www.thewineshops.com/tws/black-cellar-sauvignon-blanc-1772.html
+
+9. Produkt
+http://www.thewineshops.com/tws/xoxo-pinot-grigio-chardonnay-sparkling.html
+
+10. Produkt
+http://www.thewineshops.com/tws/trius-brut.html
+
+DEAL OF THE WEEK 
+http://www.thewineshops.com/tws/peller-estates-french-cross-dry-white.html
+
+
+
+zapytanie zwracajace pojedyncze dane wina
+SELECT Wine_ID, Name_Value,Type_Name, Country_Name, Year_Value, Price_Value
+FROM wines as w
+inner join ref_years as y
+	on w.Year_Code = y.Year_Code
+inner join ref_types as t
+on w.Type_Code = t.Type_Code
+inner join ref_prices as p
+on w.Price_Code = p.Price_Code
+inner join ref_names as n
+on w.Name_Code = n.Name_Code
+inner join ref_countries as c 
+on w.Country_Code = c.Country_Code
+where w.Type_Code = 1
+
+
+
+
+
